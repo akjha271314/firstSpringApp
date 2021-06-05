@@ -14,12 +14,12 @@ public class BookController {
         this.bookRepository = bookRepository;
     }
 
-    @RequestMapping("/books")
+    @RequestMapping("/bookList")
     public String getBooks(Model model){
 
         model.addAttribute("books",bookRepository.findAll());
 
-        return "books";
+        return "bookList";
     }
 
 }
